@@ -15,6 +15,7 @@ class LoginTest extends DuskTestCase
      * A Dusk test example.
      *
      * @return void
+     * @throws \Throwable
      * @test
      */
     public function user_can_sign_in()

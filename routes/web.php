@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::prefix('/admin')
+//    ->name('admin.')
+//    //->middleware('Auth')
+//    ->group(function(){
+//        Route::resources(['users'=>'Admin\UsersController']);
+//    });
+Route::get('/{any?}', 'HomeController@index')->name('home')->where('any','.*');
